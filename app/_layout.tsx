@@ -17,7 +17,7 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"), // Corrigido o caminho da fonte
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"), // Verifique se a fonte está nesse caminho
   });
 
   useEffect(() => {
@@ -33,10 +33,11 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-        {/* Carregando a rota de navegação por abas */}
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        {/* Remover "+not-found" se não for necessária */}
-        <Stack.Screen name="+not-found" />
+        {/* Carregando a rota de navegação por abas e definindo o título global */}
+        <Stack.Screen
+          name="(tabs)"
+          options={{ headerShown: false, title: "ExoticPetManager" }}
+        />
       </Stack>
     </ThemeProvider>
   );
