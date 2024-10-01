@@ -36,27 +36,37 @@ Execute o projeto:
 
 Para iniciar o aplicativo, rode o comando:
 
-bash
+
 Copiar código
 npx expo start
 Testar no dispositivo:
 
 Escaneie o QR Code exibido no terminal com o aplicativo Expo Go para rodar o projeto no seu dispositivo móvel.
 
-Componentes Utilizados:
-Navigation: Utilizamos a navegação por abas (Bottom Tab Navigator) e o Stack Navigation para navegar entre as telas.
-View: Usado para estruturar o layout das telas.
-StackView: Usado para empilhar as telas e gerenciar a navegação entre elas.
-Header: Implementado automaticamente com o Stack Navigator.
-Stack Navigation: Utilizado para navegação entre diferentes telas, como a de adicionar e listar animais.
-BottomTabNavigator: Utilizado para criar a navegação entre as abas principais (Adicionar Animal, Listar Animais).
-Text: Usado para exibir rótulos e títulos nas telas.
-TextInput: Usado para permitir a entrada de dados do usuário, como nome, espécie, data de nascimento, etc.
-Button: Usado para acionar as ações, como salvar os dados dos animais.
-Alert: Utilizado para exibir mensagens de sucesso ou erro ao usuário.
-AsyncStorage: Usado para salvar e carregar os dados dos animais localmente no dispositivo.
-Explicação de Como Cada Componente Foi Usado:
-Navigation (Stack e BottomTabNavigator):
+Componentes Utilizados
+Navigation: Utilizamos a navegação por abas (Bottom Tab Navigator) e o Stack Navigation para navegar entre as diferentes telas do aplicativo.
+
+View: Usado para estruturar o layout das telas e organizar os componentes de interface.
+
+StackView: Usado para empilhar as telas e gerenciar a navegação de forma hierárquica (navegação entre telas).
+
+Header: Implementado automaticamente pelo Stack Navigator para exibir o título da tela no topo, com opção de personalização.
+
+Stack Navigation: Utilizado para navegar entre telas específicas, como a de Adicionar Animal e a de Lista de Animais, permitindo navegação hierárquica.
+
+BottomTabNavigator: Implementado para criar a navegação entre as abas principais do aplicativo. As abas controlam a navegação entre as telas de Adicionar Animal e Listar Animais.
+
+Text: Utilizado para exibir textos nas telas, como rótulos para os campos de entrada e títulos.
+
+TextInput: Usado para permitir a entrada de dados do usuário. Por exemplo, campos como nome, espécie, data de nascimento, entre outros, utilizam esse componente.
+
+Button: Utilizado para permitir a interação com o usuário. Um exemplo é o botão de Salvar Animal, que aciona a ação de salvar as informações no armazenamento local.
+
+Alert: Usado para exibir mensagens de feedback ao usuário. Por exemplo, uma mensagem de sucesso ao adicionar um novo animal ou de erro caso ocorra algum problema.
+
+AsyncStorage: Utilizado para salvar e carregar os dados dos animais no armazenamento local do dispositivo, garantindo que as informações persistam entre sessões.
+
+
 
 Foi utilizado o Stack Navigation para empilhar e navegar entre diferentes telas do aplicativo, como a tela de adicionar um novo animal e a lista de animais.
 O BottomTabNavigator foi utilizado para criar a navegação entre as abas principais do aplicativo: uma aba para adicionar animais e outra para listar os animais.
